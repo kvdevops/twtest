@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/bin/bash -x
 
-v="$1"
-
-[ -z "$v" ] && echo "Provide version of tomcat" && exit 1
+[ -z "$TOMCAT_VERSION" ] && echo "Provide version of tomcat" && exit 1
+v="${TOMCAT_VERSION}"
 
 # download and setup tomcat in /opt/
 tomcat_ver="apache-tomcat-${v}"
